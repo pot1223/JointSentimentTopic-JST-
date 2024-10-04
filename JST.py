@@ -134,6 +134,10 @@ class JST:
                     self.topic_assignments[d][i] = new_topic
         return self._compute_distributions()  
 
+# ============================================================================================================================  #
+
+
+
 
 paradigm_pos = positive # 각 긍정 및 부정 단어도 토큰화 수행 
 
@@ -150,7 +154,9 @@ print("Sentiment-Topic-Word Distribution (Phi)")
 print("Document-Sentiment-Topic Distribution (Theta)")
 print("Document-Sentiment Distribution (pi)")
 
+# ============================================================================================= # 
 
+ # 해석 # 
 
 indexed_list = list(enumerate(phi[1][5]))
 
@@ -162,10 +168,6 @@ top_20_with_index = sorted_indexed_list[:20]
 
 for index, value in top_20_with_index:
     print(f"Index: {index}, Word: {word_lst[index]}, Value: {value}")
-
-
-
-
 
 
 
@@ -195,6 +197,9 @@ for k in range(6): # 토픽 수 입력
         print(topic_positive[k])
         print(topic_negative[k])
         print(f"토픽 {k}는 부정")
+
+# ========================================================================================== # 
+# 일관성 점수 
 
 
 from itertools import combinations
